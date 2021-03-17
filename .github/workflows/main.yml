@@ -35,6 +35,5 @@ jobs:
 
       - name: Deploy
         run: |
-          pwd
-          cp -r ./public ~/weather
-          echo Finished success
+          cp -R ./public/ /var/www/weather
+          echo Finished
