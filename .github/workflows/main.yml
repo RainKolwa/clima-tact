@@ -25,14 +25,17 @@ jobs:
 
       # Runs a single command using the runners shell
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           npm install
-        
+       
       - name: Build
-        run: npm run build
+        run: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          npm build
 
       - name: Deploy
         run: |
