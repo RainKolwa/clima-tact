@@ -39,5 +39,5 @@ jobs:
 
       - name: Deploy
         run: |
-          cp -R ./public/ /var/www/weather
+          sudo cp -R ./public/ /var/www/weather
           echo Finished
